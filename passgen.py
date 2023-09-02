@@ -1,4 +1,4 @@
-#//==  VERSION 1.2
+#//==  VERSION 1.3
 #imports 
 import time
 from time import sleep
