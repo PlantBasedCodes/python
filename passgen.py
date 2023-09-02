@@ -1,41 +1,61 @@
-#imports
+#//==  VERSION 1.2
+#imports 
 import time
 from time import sleep
-import random
 import sys
+import random
 
-#code
 
+#stings
 chars = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()+_-='
-username = 'qwertyuiopasdfghjklzxcvbnm1234567890'
-backup = '1234567890abcgiop'
+charactername = 'abc123'
+VisaDeposit = '1234567890'
 
-password = ''
-for x in range(16):
-    password += random.choice(chars)
+Password = 'Password'
+Username = 'Username'
+Backup = 'Backup'
 
-username1 = ''
-for x in range(12):
-    username1 += random.choice(username)
 
-backupcode = ''
-for x in range(6):
-    backupcode += random.choice(backup)
-
+#stuff here
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(0.049)
 
-print_slow("Username Password & Security Code Generator \n")
+
+password = ''
+for x in range(16):
+    password += random.choice(chars)
+    
+username1 = ''
+for x in range(12):
+    username1 += random.choice(charactername)
+
+backupcode = ''
+for x in range(6):
+    backupcode += random.choice(VisaDeposit)
+        
+#code
+print_slow("PassShield V1\n")
 sleep(.75)
-print_slow("Very basic \n")
+print_slow("Password Generator \n")
 sleep(.75)
-print_slow("Source @ https://github.com/PlantBasedCodes/python/blob/main/passgen.py \n")
-sleep(3)
-print('\n Your password: ' + password +  '\n Your username: ' + username + '\n You backup codes: ' + backupcode + '\n')
-sleep(.95)
-print('thank you for using this \n')
-sleep(.75)
-print('- Chris \n')
+
+while True:
+    sleep(1)
+    Option = input('\n Would you like to generate a\n Password\n Username\n or Backup Code: ')
+    if Option == Password:
+        print(password)
+    elif Option == Username:
+        print(username1)
+    elif Option == Backup:
+        print(backupcode)
+    else:
+        print('Case Senitive!')
+
+
+#other
+
+
+
