@@ -7,6 +7,8 @@ from os import system
 import webbrowser
 import pyperclip
 import string
+import colorama
+from colorama import Fore, Back, Style
 
 import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("PassSheild V2 - Tools for nerds")
@@ -105,14 +107,12 @@ def main():
 
     while True:
         os.system('cls')
-        print(" ___                      ___  _          _  _     _")
-        print("| _ \ __ _  ___ ___      / __|| |_   ___ (_)| | __| |")
-        print("|  _// _` |(_-/(_-/      \__ \|   \ / -_)| || |/ _` |")
-        print("|_|  \__/_|/__//__/      |___/|_||_|\___||_||_|\__/_|\n")
+        print(f"{Fore.RED} ___                      ___  _          _  _     _")
+        print(f"{Fore.RED}| _ \ __ _  ___ ___      / __|| |_   ___ (_)| | __| |")
+        print(f"{Fore.RED}|  _// _` |(_-/(_-/      \__ \|   \ / -_)| || |/ _` |")
+        print(f"{Fore.RED}|_|  \__/_|/__//__/      |___/|_||_|\___||_||_|\__/_|\n")
         sleep(.75)
-        print('Robux option is in development -Its fake?!?!')
-        sleep(.75)
-        option = input('Main\n[1]. Password       [2]. Username\n[3]. Backup Code    [4]. Robux Generator\n------------\nOther\n[5]. Copy Discord   [6]. Help\n[7]. Github         [8]. Exit\n[9]. Credits        [10]. Updates\n\nInput: ')
+        option = input(f'Main{Fore.RED}\n[1]. Password       [2]. Username\n[3]. Backup Code    [4]. Robux Generator\n------------\nOther\n[5]. Copy Discord   [6]. Help\n[7]. Github         [8]. Exit\n[9]. Credits        [10]. Updates\n\Input: ')
         if option == '1':
             length = int(input("Enter the length of the password: "))
             password = generate_password(length)
