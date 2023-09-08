@@ -78,6 +78,7 @@ open = input('Would you like to open Passsheild V2? [Y/N]\nInput: ')
 if open == 'yes' or open == 'Y' or open == 'y' or open == 'Yes':
     os.system('cls')
 else:
+    {Fore.RED}
     print('\nClosing')
     print('.75')
     sleep(.25)
@@ -91,6 +92,7 @@ else:
     quit()
 
 def main():
+    {Fore.RED}
     print('loading.')
     sleep(.37)
     print('loading..')
@@ -107,12 +109,15 @@ def main():
 
     while True:
         os.system('cls')
-        print(f"{Fore.RED} ___                      ___  _          _  _     _")
-        print(f"{Fore.RED}| _ \ __ _  ___ ___      / __|| |_   ___ (_)| | __| |")
-        print(f"{Fore.RED}|  _// _` |(_-/(_-/      \__ \|   \ / -_)| || |/ _` |")
-        print(f"{Fore.RED}|_|  \__/_|/__//__/      |___/|_||_|\___||_||_|\__/_|\n")
+        {Fore.RED}
+        print(f"{Fore.RED} ___                      ___  _     _       _     _ ")
+        print(f"{Fore.RED}| _ \ __ _  ___ ___      / __|| |_  (_) ___ | | __| |")
+        print(f"{Fore.RED}|  _// _` |(_-/(_-/      \__ \|   \ | |/ -_)| |/ _` |")
+        print(f"{Fore.RED}|_|  \__/_|/__//__/      |___/|_||_||_|\___||_|\__/_|\n")
+        print('Passheild The Solution.')
+        
         sleep(.75)
-        option = input(f'Main{Fore.RED}\n[1]. Password       [2]. Username\n[3]. Backup Code    [4]. Robux Generator\n------------\nOther\n[5]. Copy Discord   [6]. Help\n[7]. Github         [8]. Exit\n[9]. Credits        [10]. Updates\n\Input: ')
+        option = input(f'Main{Fore.RED}\n[1]. Password       [2]. Username\n[3]. Backup Code    [4]. Robux Generator\n------------\nOther\n[5]. Copy Discord   [6]. Help\n[7]. Github         [8]. Exit\n[9]. Credits        [10]. Updates\n------------\n\nInput: ')
         if option == '1':
             length = int(input("Enter the length of the password: "))
             password = generate_password(length)
@@ -148,7 +153,7 @@ def main():
         elif option == '9':
             credits()
             input("Press Enter to continue...")
-        elif option == '9':
+        elif option == '10':
             print('Pass Sheild Updates\n\n[Update 1.0] - Added Username, Password and backup code generator\n[Update 1.1] - Added loading & real robux generator\n[Update 1.2] - Added github & other links\n[Update 1.3] - Added inputs')
         else:
             print('Invalid option. Please select a valid option.')
